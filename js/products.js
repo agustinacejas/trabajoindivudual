@@ -1,24 +1,24 @@
-let categoriaArray = [];
+let jsonDataResponse = [];
 
 
-function mostrarAutos (array){
+function mostrarAutos (jsonAutos){
     let auto = "";
     
-    for(let i = 0; i < array.products.length; i++) {
-        let products = array.products[i];
+    for(let i = 0; i < jsonAutos.products.length; i++) {
+        let productoActual = jsonAutos.products[i];
         auto += `
         <div class="list-group-item list-group-item-action">
             <div class="row">
                 <div class="col-3">
-                    <img src="` + products.image + `" alt="product image" class="img-thumbnail">
+                    <img src="` + productoActual.image + `" alt="product image" class="img-thumbnail">
                 </div>
                 <div class="col">
                     <div class="d-flex w-100 justify-content-between">
                         <div class="mb-1">
-                        <h4>`+ products.name + " - " + products.currency + " " + products.cost +`</h4> 
-                        <p> `+ products.description +`</p> 
+                        <h4>`+ productoActual.name + " - " + productoActual.currency + " " + productoActual.cost +`</h4> 
+                        <p> `+ productoActual.description +`</p> 
                         </div>
-                        <small class="text-muted">` + products.soldCount + " vendidos" + `</small> 
+                        <small class="text-muted">` + productoActual.soldCount + " vendidos" + `</small> 
                     </div>
 
                 </div>
@@ -34,8 +34,8 @@ document.addEventListener("DOMContentLoaded", function(){
         if (resultObj.status === "ok")
         {
             console.log(resultObj.data)
-            categoriaArray = resultObj.data;
-            mostrarAutos(categoriaArray);
+            jsonDataResponse = resultObj.data;
+            mostrarAutos(jsonDataResponse);
         }
     });
 });

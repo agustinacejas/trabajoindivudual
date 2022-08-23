@@ -15,4 +15,5 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("inicio").addEventListener("click", () =>{
         login();
     });
+    
 });
