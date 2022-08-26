@@ -1,7 +1,7 @@
 let jsonDataResponse = [];
 
 
-function mostrarAutos (jsonAutos){
+function desplegarCategorias(jsonAutos){
     let auto = "";
     
     for(let i = 0; i < jsonAutos.products.length; i++) {
@@ -26,6 +26,7 @@ function mostrarAutos (jsonAutos){
         </div>
         `
         document.getElementById("autos").innerHTML = auto; 
+        document.getElementById("frase").innerHTML = "Verás aqui todos los productos de la categoria " + jsonAutos.catName
     }  
 }
 
@@ -35,7 +36,14 @@ document.addEventListener("DOMContentLoaded", function(){
         {
             console.log(resultObj.data)
             jsonDataResponse = resultObj.data;
-            mostrarAutos(jsonDataResponse);
+            desplegarCategorias(jsonDataResponse);
         }
     });
 });
+
+
+
+
+
+
+
