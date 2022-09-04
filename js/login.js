@@ -5,6 +5,7 @@ function login() {
     if (usuario != "" && clave != "") {
         localStorage.setItem('user',usuario);
         location.href = "index.html";
+        
     } else {
         alert("Usuario y clave son obligatorios");
     }
