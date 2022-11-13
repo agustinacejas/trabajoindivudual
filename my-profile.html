@@ -28,7 +28,7 @@
 
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-1">
-    <div class="container">
+    <div  class="container">
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -46,17 +46,98 @@
           </li>
           <li class="nav-item">
           </li>
+            <!--Parte 2 de entrega 4, creacion del menú desplegable utlizando bootsrap/-->
+            <div class="dropdown">
+              <button
+                class="btn btn-secondary dropdown-toggle"
+                type="button"
+                id="nombre_usuario"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              ></button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a id="mi_carrito"class="dropdown-item" href="#">Mi carrito <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart3" viewBox="0 0 16 16">
+                  <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                </svg></a></li>
+                <li><a id="mi_perfil" class="dropdown-item" href="#">Mi perfil <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                  <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                  <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+                </svg></a></li>
+                <li>
+                  <a id="cerrar_sesion" class="dropdown-item" href="#"
+                    >Cerrar sesión <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-in-left" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M10 3.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-2a.5.5 0 0 1 1 0v2A1.5 1.5 0 0 1 9.5 14h-8A1.5 1.5 0 0 1 0 12.5v-9A1.5 1.5 0 0 1 1.5 2h8A1.5 1.5 0 0 1 11 3.5v2a.5.5 0 0 1-1 0v-2z"/>
+                      <path fill-rule="evenodd" d="M4.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H14.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z"/>
+                    </svg></a>
+                </li>
+              </ul>
+            </div>
         </ul>
       </div>
     </div>
   </nav>
-  <main>
-    <div class="container">
-      <div class="alert alert-danger text-center" role="alert">
-        <h4 class="alert-heading">Funcionalidad en desarrollo</h4>
+  <pre></pre>
+
+  <div style="text-align: left;" class="container">
+    <form class="row g-3 needs-validation" novalidate>
+      <h3>Perfil</h3>
+      <pre></pre>
+      <hr>
+      <div class="row">
+        <div class="col-md-5">
+          <label for="validationCustom01" class="form-label">Primer nombre*</label>
+          <input type="text" class="form-control" id="primerNombre" value="" required>
+          <div class="invalid-feedback">
+            Campo requerido
+          </div>
+        </div>
+        <div class="col-md-5">
+          <label for="validationCustom02" class="form-label">Segundo nombre</label>
+          <input type="text" class="form-control" id="segNombre" value="" >
+        </div>
+  
       </div>
-    </div>
-  </main>
+
+      <div class="row">
+        <div class="col-md-5">
+          <label for="validationCustom01" class="form-label">Primer apellido*</label>
+          <input type="text" class="form-control" id="primerApellido" value="" required>
+          <div class="invalid-feedback">
+            Campo requerido
+          </div>
+        </div>
+        <div class="col-md-5">
+          <label for="validationCustom03" class="form-label">Segundo apellido</label>
+          <input type="text" class="form-control" id="segApellido">
+        </div>
+
+      </div>
+      
+      <div class="row">
+        <div class="col-md-5">
+          <label for="validationCustom01" class="form-label">E-mail</label>
+          <input type="text" class="form-control" id="email" value="">
+        </div>
+        <div class="col-md-5">
+          <label for="validationCustom03" class="form-label">Teléfono de contacto*</label>
+          <input type="number" class="form-control" id="telefono" required>
+          <div class="invalid-feedback">
+            Campo requerido
+          </div>
+        </div>
+
+      </div>
+      <pre>
+        
+      </pre>
+      <hr>
+      <div class="col-12">
+        <button id="guardarCambios" class="btn btn-primary" type="submit">Guardar cambios</button>
+      </div>
+    </form>
+
+  </div>
+  
   <footer class="text-muted">
     <div class="container">
       <p class="float-end">

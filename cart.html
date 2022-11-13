@@ -31,15 +31,218 @@
           </li>
           <li class="nav-item">
           </li>
+          <!--Parte 2 de entrega 4, creacion del menú desplegable utlizando bootsrap/-->
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="nombre_usuario" data-bs-toggle="dropdown" aria-expanded="false">
+              
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li><a id="mi_carrito" class="dropdown-item" href="#">Mi carrito <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart3" viewBox="0 0 16 16">
+                <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+              </svg></a></li>
+              <li><a id= "mi_perfil" class="dropdown-item" href="#">Mi perfil <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+              </svg></a></li>
+              <li><a id= "cerrar_sesion" class="dropdown-item" href="#">Cerrar sesión <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-in-left" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M10 3.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-2a.5.5 0 0 1 1 0v2A1.5 1.5 0 0 1 9.5 14h-8A1.5 1.5 0 0 1 0 12.5v-9A1.5 1.5 0 0 1 1.5 2h8A1.5 1.5 0 0 1 11 3.5v2a.5.5 0 0 1-1 0v-2z"/>
+                <path fill-rule="evenodd" d="M4.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H14.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z"/>
+              </svg></a></li>
+            </ul>
+          </div>
+      </ul>
         </ul>
       </div>
     </div>
   </nav>
   <main>
     <div class="container">
-      <div class="alert alert-danger text-center" role="alert">
-        <h4 class="alert-heading">Funcionalidad en desarrollo</h4>
+      <h1>Carrito de compras</h1>
+      <h4>Articulos a comprar</h4>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col"></th>
+              <th scope="col">Nombre</th>
+              <th scope="col">Costo</th>
+              <th scope="col">Cantidad</th>
+              <th scope="col">Subtotal</th>
+          </tr>
+        </thead>
+        <tbody id="tabla">
+          
+        </tbody>
+
+      </table>
+      
+      <div style="text-align: left;">
+        <form class="row g-3 needs-validation" novalidate>
+          <div> <!--Div con botones de envio-->
+            <h3>Tipo de envio</h3>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+              <label class="form-check-label" for="exampleRadios1">Premium 2 a 5 días(15%)
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+              <label class="form-check-label" for="exampleRadios2">Express 5 a 8 días(7%)
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3">
+              <label class="form-check-label" for="exampleRadios3">Standard 12 a 15 días(5%)
+              </label>
+            </div>
+            <br>
+            <hr>
+            <div> <!--div que contiene inmputs para direccion de envio-->
+              <h3>Dirección de envio</h3>
+              <div class="row">
+                <div class="col-md-5">
+                  <label for="validationCustom01" class="form-label">Calle</label>
+                  <input type="text" class="form-control" id="validationCustom01" value="" required>
+                  <div class="invalid-feedback">
+                    Ingresa una calle
+                  </div>
+                </div>
+                <div class="col-md-5">
+                  <label for="validationCustom02" class="form-label">Número</label>
+                  <input type="text" class="form-control" id="validationCustom02" value="" required>
+                  <div class="invalid-feedback">
+                    Ingresa un número
+                  </div>
+                </div>
+
+
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <label for="validationCustom01" class="form-label">Esquina</label>
+                  <input type="text" class="form-control" id="validationCustom01" value="" required>
+                  <div class="invalid-feedback">
+                    Ingresa una esquina
+                  </div>
+                </div>
+
+
+              </div>
+  
+            </div>
+
+          </div>
+          <br>
+          <hr>
+          <div><!--Contiene los costos totales-->
+            <h4>Costos</h4>
+            <ul class="list-group mb-3">
+              <li class="list-group-item d-flex justify-content-between lh-condensed">
+                  <div>
+                  <h6 class="my-0">Subtotal</h6>
+                  <small class="text-muted">Costo unitario del producto por cantidad</small>
+                  </div>
+                  <span class="text-muted" id="subTotal"></span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between lh-condensed">
+                  <div>
+                    <h6 class="my-0">Costo de envio</h6>
+                    <small class="text-muted">Según el tipo de envio</small>
+                  </div>
+                  <span class="text-muted" id="envio"></span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between">
+                  <span>Total ($)</span>
+                  <strong id="total"></strong>
+                </li>
+              </ul>
+
+          </div>
+          <br>
+          <hr>
+          <div> <!--Div modal-->
+            <h5>Forma de pago</h5>
+            
+            <span id="span"></span><a href="#exampleModal" data-bs-toggle="modal" data-bs-target="#exampleModal">Seleccionar</a>
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Forma de pago</h1>
+                  </div>
+                  <div class="modal-body">
+                    <div> <!--Div que contiene info sobre tjeta de credito-->
+                      <div> <!--Div con botones de envio-->
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="formaDePago" id="tarjetaCred" value="option1" required>
+                          <label class="form-check-label" for="exampleRadios1">Tarjeta de Crédito
+                          </label>
+                          <hr>
+                          <div class="row">
+                            <div class="col-md-6">
+                              <label  for="exampleRadios1">Número de tarjeta</label>
+                              <input  type="text" id="numeroDeTarjeta">
+                            </div>
+                            <div class="col-md-4">
+                              <label  for="exampleRadios1">Código de seg.</label>
+                              <input  type="text" id="codigoDeSeg">
+                            </div>
+                            
+                              <div class="col-md-6">
+                                <label  for="exampleRadios1">Vencimiento (MM/AA)</label>
+                                <input  type="text" id="vencimiento">
+                              </div>
+    
+                          </div>
+                        </div>
+                        <br>
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="formaDePago" id="trasfBanc" value="option2" required>
+                          <label class="form-check-label" for="exampleRadios2">Transferencia Bancaria</label>
+                          
+                          <hr>
+                          <div class="row">
+                            <div class="col-md-5">
+                              <label  for="exampleRadios1">Número de cuenta</label>
+                              <input  type="text" id="numeroDeCuenta">
+                            </div>
+                        </div>
+                       
+
+
+                        </div>
+                      </div>
+                
+                  </div>
+                  <div class="modal-footer">
+                
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cerrar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="d-grid gap-2">
+            <button class="btn btn-primary" type="submit">Finalizar compra</button>
+          </div>
+          <div class="alert alert-success alert-dismissible fade" role="alert" id="alert-success">
+            <p>¡Has comprado con éxito!</p>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+
+          
+
+          <!--<div class="row"> 
+            <div class="col-12">
+              <button class="btn btn-primary" type="submit">Enviar formulario</button>
+            </div>
+          </div> -->
+          
+          
+        </form>
+
       </div>
+
     </div>
   </main>
   <footer class="text-muted">

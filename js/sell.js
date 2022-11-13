@@ -33,6 +33,7 @@ document.addEventListener("DOMContentLoaded", function(e){
         updateTotalCosts();
     });
 
+
     document.getElementById("productCostInput").addEventListener("change", function(){
         productCost = this.value;
         updateTotalCosts();
@@ -64,6 +65,7 @@ document.addEventListener("DOMContentLoaded", function(e){
         }
 
         updateTotalCosts();
+
     });
 
 
@@ -146,4 +148,6 @@ document.addEventListener("DOMContentLoaded", function(e){
             });
         }
     });
+    document.getElementById("nombre_usuario").innerHTML = localStorage.getItem("user");
+
 });

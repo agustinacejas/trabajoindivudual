@@ -13,4 +13,10 @@ document.addEventListener("DOMContentLoaded", function(){
     });
     document.getElementById("nombre_usuario").innerHTML = localStorage.getItem("user");
 
+    
+
 });
+
+
+
+

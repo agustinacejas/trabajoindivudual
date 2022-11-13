@@ -192,3 +192,25 @@ a.custom-card:hover {
   color: orange;
 }
 
+#productosDibujados {
+  text-align: left;
+}
+
+#comentarios {
+  text-align: center;
+}
+
+#imagenes{
+  display: flex;
+}
+#productosRelacionados{
+  display: flex;
+
+}
+
+#span{
+  color:red;
+}
+
+
+
