@@ -175,6 +175,30 @@ function buildProductUrl(idProduct){
           validacion()
         }else{
           compraConExito()
+          let direccion = document.getElementById('validationCustom01').value
+          let numeroDeCasa = document.getElementById('validationCustom02').value
+          let esq= document.getElementById('validationCustom02').value
+          console.log(direccion)
+        
+            fetch("http://localhost:3000/guardar", {
+              headers: { "Content-Type": "application/json; charset=utf-8" },
+              method: "POST",
+              body: JSON.stringify({
+                calle: direccion,
+                numero: numeroDeCasa,
+                esquina: esq,
+
+
+
+              }),
+              
+
+            })
+            .then((response) => response.json())
+              .then((reponse) => {console.log(reponse)});
+              
+        
+  
             event.preventDefault()
             event.stopPropagation()
         }

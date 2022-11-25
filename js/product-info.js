@@ -17,6 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
     
   });
 
+
   document.getElementById("agregar").addEventListener("click", function () {
     let nuevoComentario = agregarNuevoComentario();
     console.log("Log3:" + nuevoComentario);

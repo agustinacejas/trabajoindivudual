@@ -1,10 +1,10 @@
-const CATEGORIES_URL = "https://japceibal.github.io/emercado-api/cats/cat.json";
-const PUBLISH_PRODUCT_URL = "https://japceibal.github.io/emercado-api/sell/publish.json";
-const PRODUCTS_URL = "https://japceibal.github.io/emercado-api/cats_products/" + localStorage.getItem('catID') + ".json";
-const PRODUCT_INFO_URL = "https://japceibal.github.io/emercado-api/products/" + localStorage.getItem('prodID') + ".json"; 
-const PRODUCT_INFO_COMMENTS_URL = "https://japceibal.github.io/emercado-api/products_comments/" + localStorage.getItem('prodID') + ".json";
-const CART_INFO_URL = "https://japceibal.github.io/emercado-api/user_cart/";
-const CART_BUY_URL = "https://japceibal.github.io/emercado-api/cart/buy.json";
+const CATEGORIES_URL = "http://localhost:3000/cat";
+const PUBLISH_PRODUCT_URL = "http://localhost:3000/vender";
+const PRODUCTS_URL = "http://localhost:3000/productos/" + localStorage.getItem('catID');
+const PRODUCT_INFO_URL = "http://localhost:3000/producto/" + localStorage.getItem('prodID') ; 
+const PRODUCT_INFO_COMMENTS_URL = "http://localhost:3000/comentarios/" + localStorage.getItem('prodID');
+const CART_INFO_URL = "http://localhost:3000/user_cart";
+const CART_BUY_URL = "http://localhost:3000/buy";
 const EXT_TYPE = ".json";
 
 document.addEventListener("DOMContentLoaded", function(e){
